@@ -1,0 +1,12 @@
+title: nmk-ai-lab
+description: AI experimentation and open source
+theme: minima
+baseurl: ""
+url: "https://nmk-ai-lab.github.io"
+github_username: your-username
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
