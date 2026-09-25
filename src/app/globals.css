@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #07090f;
+  --line: rgba(232, 237, 244, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(62, 200, 184, 0.35);
+  color: #f4f7fb;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(232, 237, 244, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse at 70% 40%, black 10%, transparent 68%);
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.node-pulse {
+  animation: node-pulse 4.8s ease-in-out infinite;
+}
+
+.node-pulse-delay {
+  animation-delay: 1.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .node-pulse,
+  .node-pulse-delay {
+    animation: none;
+    opacity: 0.8;
+  }
+}
+
+.field {
+  @apply w-full rounded-xl border border-white/10 bg-ink px-4 py-3 text-sm text-paper outline-none transition placeholder:text-mist/70 focus:border-accent/70;
+}

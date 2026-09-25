@@ -1,39 +1,30 @@
-<div align="center">
+# Sparlen
 
-# 🤖 SMB AI Toolkit
-### Practical AI automation tools, templates, and guides for Indian businesses
+Single-page site for Sparlen, an AI consulting and freelance practice that designs, builds, and deploys agents for business workflows.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/sparlen-ai-lab/smb-ai-toolkit?style=social)](https://github.com/sparlen-ai-lab/smb-ai-toolkit/stargazers)
-[![Website](https://img.shields.io/badge/Website-sparlen.com-blue)](https://sparlen.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/[your-handle])
+## Stack
 
-**Built by [Sparlen AI Lab](https://sparlen.com) — AI automation for the businesses that keep India running.**
+- Next.js 14 (App Router) + TypeScript
+- Tailwind CSS
+- Framer Motion
 
-</div>
+## Develop
 
----
+```bash
+npm install
+npm run dev
+```
 
-## 🎯 What This Repository Is
+Open [http://localhost:3000](http://localhost:3000).
 
-This is the open-source toolkit behind **Sparlen AI Lab's** work with Indian SMBs —
-CA firms, D2C founders, logistics teams, HR departments, and operations managers
-who want AI automation without the enterprise price tag.
+## Edit the copy
 
-**Every tool, template, and guide here is:**
-- ✅ Built and tested in real business contexts
-- ✅ Production-ready (not just demos)
-- ✅ Designed for non-technical teams to deploy
-- ✅ Open source and free to use
+All visible text, links, and the Calendly URL live in [`src/content/site.ts`](src/content/site.ts).
 
----
+- Set `calendlyUrl` to your scheduling link to replace the embed placeholder.
+- Set `email`, `social.linkedin`, and `social.github` before publishing.
+- The contact form opens the visitor’s email app with the brief filled in. Point it at your own endpoint in `src/components/Contact.tsx` if you add a backend later.
 
-## 🏗️ What We Build
+## Deploy
 
-| Category | What's Inside | Who It's For |
-|----------|--------------|--------------|
-| **AI Agents** | Customer support bots, document Q&A agents, invoice processors | Operations teams |
-| **Automation Templates** | n8n workflows, LangChain chains, Make.com blueprints | Business owners |
-| **Educational Modules** | RAG fundamentals, prompt engineering, LLM for business | Startup CTOs, DS students |
-| **Mini-Tools** | Lead qualifier, contract reviewer, meeting summarizer | Sales & HR teams |
-| **Case Studies** | End-to-end implementations with architecture + outcome | Decision makers |
+The app is a standard Next.js project and deploys on Vercel with no extra configuration. Set the production URL in `site.url` so canonical and Open Graph links resolve correctly.
